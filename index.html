@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.12.0.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Vacation Suggester</title>
+  </head>
+  <body>
+    <div class="container">
+
+
+      <h1>Vacation Suggester</h1>
+      <h3>Fill in the answers</h3>
+      <hr>
+
+      <div class="row">
+        <div class="col-md-5 col-md-offset-4">
+          <form id="celebrityDate">
+            <div class="form-group">
+              <label  for="age">Age</label>
+              <input type="text" class="form=control" id="age">
+            </div>
+
+            <div class="form-group">
+              <label for="type">What type of climate do you like?</label>
+              <select class="form-control" id="type">
+                <option value="formDropTropical">Tropical</option>
+                <option value="Dry">Dry</option>
+                <option value="mild">Mild</option>
+                <option value="movie">Polar</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-default">Find your next Vacation!</button>
+          </div>
+        </div>
+      <div id="printToScreen">
+        <h2>Your Vacation will be <span id="vacaName"></span></h2>
+      </div>
+      <div id="hawaii">
+        <img src="img/hawaii.jpg"></img>
+      </div>
+      <div id="sm">
+        <img src="img/stmartin.jpg"></img>
+      </div>
+      <div id="gd">
+        <img src="img/gobidesert.jpg"></img>
+      </div>
+    </div>
+  </body>
+</html>

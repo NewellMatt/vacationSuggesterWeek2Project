@@ -1,0 +1,19 @@
+#printToScreen, #hawaii, #sm, #gd {
+  display: none;
+}
+
+h1, h3 {
+  text-align: center;
+}
+
+label {
+  font-size: 16px;
+}
+
+.btn {
+  margin-top: 20px;
+}
+
+img {
+  max-width: 500px
+}
