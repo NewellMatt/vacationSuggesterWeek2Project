@@ -9,32 +9,51 @@
   </head>
   <body>
     <div class="container">
-
-
       <h1>Vacation Suggester</h1>
       <h3>Fill in the answers</h3>
       <hr>
-
       <div class="row">
         <div class="col-md-5 col-md-offset-4">
-          <form id="celebrityDate">
+          <form id="vacacationSuggester">
             <div class="form-group">
               <label  for="age">Age</label>
               <input type="text" class="form=control" id="age">
             </div>
-
             <div class="form-group">
               <label for="type">What type of climate do you like?</label>
               <select class="form-control" id="typeOfClimate">
                 <option value="formDropTropical">Tropical</option>
                 <option value="formDropDry">Dry</option>
-                <option value="mild">Mild</option>
-                <option value="movie">Polar</option>
+                <option value="formDropMild">Mild</option>
+                <option value="formDropPolar">Polar</option>
               </select>
             </div>
-            <button type="submit" class="btn btn-default">Find your next Vacation!</button>
+
+            <!--use value="")-->
+            <h4>What do you like the most?</h4>
+            <div class="radio">
+              <label>
+                <input name="hobbie" type="radio" value="radioValueAdventure">Adventure
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input name="hobbie" type="radio" value="radioValueSpa">Spa and Relax by Pool
+              </label>
+            </div>
+            <div class="radio">
+              <label for="car">
+                <input name="hobbie" type="radio" value="radioValueBeachDay">Beach Day
+              </label>
+            </div>
           </div>
-        </div>
+
+            <button type="submit" class="btn btn-default">Find your next Vacation!</button>
+          </form> <!-- idk where this is suppose to end -->
+
+
+      </div>
+
       <div id="printToScreen">
         <h2>Your Vacation will be <span id="vacaName"></span></h2>
       </div>
@@ -49,6 +68,18 @@
       </div>
       <div id="lv">
         <img src="img/lasvegas.jpg"></img>
+      </div>
+      <div id="ba">
+        <img src="img/bahamas.jpg"></img>
+      </div>
+      <div id="at">
+        <img src="img/artic.jpg"></img>
+      </div>
+      <div id="ak">
+        <img src="img/alaska.jpg"></img>
+      </div>
+      <div id="ta">
+        <img src="img/tahiti.jpg"></img>
       </div>
     </div>
   </body>
