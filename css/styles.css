@@ -17,3 +17,6 @@ label {
 img {
   max-width: 500px
 }
+h1:hover{
+  color: #ff0123
+}
