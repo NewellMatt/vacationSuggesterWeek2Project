@@ -3,7 +3,7 @@ $(document).ready(function() {
     var age = parseInt($("input#age").val());
     var type = $("select#typeOfClimate").val();
     var hobbieInput = $("input[name=hobbie]:checked").val();
-    var nameInput = $("input#name").val();
+    var nameInput = $("input#nameID").val();
 
     $("#hawaii").hide();
     $("#sm").hide();
@@ -17,6 +17,8 @@ $(document).ready(function() {
     $("#bo").hide();
 
     if (age) {
+
+
       if (type === 'formDropTropical' && age >=50 && hobbieInput === "radioValueBeachDay") {
         var oneVariable = "St Martin";
         $("#sm").show();
