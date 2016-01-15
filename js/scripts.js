@@ -16,8 +16,21 @@ $(document).ready(function() {
     $("#th").hide();
     $("#sb").hide();
     $("#bo").hide();
-    
+
     if (age) {
+
+      for(index=1;index<3;index++){
+        if(age >=25){/*Young */}
+        else if(type==='formDropTropical'||'formDropDry'||'formDropMild'||'formDropPolar'){/*ALL*/}
+        else if(hobbieInput ==='radioValueAdventure'||'radioValueSpa'||'radioValueBeachDay'){/*ALL*/}
+        else if(name.includes("a"||"e"||"i"||"o"||"u")){alert('Vowel')/*NAME CONTAINS Vowel*/}
+
+        else {
+            alert('Please Finish All Answers');
+          }
+      }
+
+      /*
       if (type === 'formDropTropical' && age >=50 && hobbieInput === "radioValueBeachDay" && typeOfLocation === "formDropCarribean") {
         var oneVariable = "St Martin";
         $("#sm").show();
@@ -163,9 +176,9 @@ $(document).ready(function() {
         $("#vacaName").text(oneVariable);
         $("#printToScreen").show();
       }
-      else {
-          alert('Please Finish All Answers');
-        }
+
+      */
+
       event.preventDefault();
     };
     });
