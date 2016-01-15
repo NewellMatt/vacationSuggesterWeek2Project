@@ -13,12 +13,27 @@
       <h3>Fill in the answers</h3>
       <hr>
       <div class="row">
-        <div class="col-md-5 col-md-offset-4">
           <form id="vacacationSuggester">
             <div class="form-group">
+              <!-- Name -->
+              <div class="form-group">
+                <label for="name">What's Your Name?</label>
+                <input id="nameID" name="name" class="form-control" type="text" placeholder="First Last">
+              </div>
+              <!-- DropDown Location -->
+              <div class="form-group">
+                <label for="type">Where do you want to go?</label>
+                <select class="form-control" id="typeOfLocation">
+                  <option value="formDropCarribean">Carribean Sea</option>
+                  <option value="formDropAsia">Asia</option>
+                  <option value="formDropNorthAmerica">North America</option>
+                </select>
+              </div>
+              <!-- Input Age -->
               <label  for="age">Age</label>
               <input type="text" class="form=control" id="age">
             </div>
+            <!-- DropDown Climate -->
             <div class="form-group">
               <label for="type">What type of climate do you like?</label>
               <select class="form-control" id="typeOfClimate">
@@ -29,7 +44,7 @@
               </select>
             </div>
 
-            <!--use value="")-->
+            <!-- Radio Hobbie -->
             <h4>What do you like the most?</h4>
             <div class="radio">
               <label>
@@ -47,23 +62,22 @@
               </label>
             </div>
 
-            <h4>Check all that you feel apply to you?</h4>
-              <div class="checkbox">
-                <label for="pizza">
-                  <input id="pizza" name="food" type="checkbox" value="Pizza">I like long walks on the beach.</label>
-              </div>
+          <!-- CheckBox Likes -->
+          <h4>Check all that you feel apply to you?</h4>
+            <div class="checkbox">
+              <label for="checkBoxOption1">
+                <input id="option1" name="checkBox" type="checkbox" value="option1">I like long walks on the beach.</label>
+            </div>
 
-              <div class="checkbox">
-                <label for="chinese">
-                  <input id="chinese" name="food" type="checkbox" value="Chinese">I like long walks along the strip with a tall flashy drink in my hand</label>
-              </div>
+            <div class="checkbox">
+              <label for="checkBoxOption2">
+                <input id="option2" name="checkBox" type="checkbox" value="option2">I like long walks along the strip with a tall flashy drink in my hand</label>
+            </div>
 
-              <div class="checkbox">
-                <label for="ihop">
-                  <input id="ihop" name="food" type="checkbox" value="IHOP">I like freezing cold weather to where my fingers are blue</label>
-              </div>
-
-
+            <div class="checkbox">
+              <label for="checkBoxOption3">
+                <input id="option3" name="checkBox" type="checkbox" value="option3">I like freezing cold weather to where my fingers are blue</label>
+            </div>
 
             <button type="submit" class="btn btn-default">Find your next Vacation!</button>
           </form> <!-- idk where this is suppose to end -->
@@ -98,6 +112,12 @@
       </div>
       <div id="ta">
         <img src="img/tahiti.jpg"></img>
+      </div>
+      <div id="sb">
+        <img src="img/snowbeach.jpg"></img>
+      </div>
+      <div id="bo">
+        <img src="img/bendOregon.jpg"></img>
       </div>
     </div>
   </body>

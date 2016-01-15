@@ -3,6 +3,8 @@ $(document).ready(function() {
     var age = parseInt($("input#age").val());
     var type = $("select#typeOfClimate").val();
     var hobbieInput = $("input[name=hobbie]:checked").val();
+    //var nameInput = $("input#nameID").val();
+    var typeOfLocation = $("select#typeOfLocation").val();
 
     $("#hawaii").hide();
     $("#sm").hide();
@@ -12,89 +14,152 @@ $(document).ready(function() {
     $("#ak").hide();
     $("#ba").hide();
     $("#th").hide();
-
+    $("#sb").hide();
+    $("#bo").hide();
+    
     if (age) {
-      if (type === 'formDropTropical' && age >=50 && hobbieInput === "radioValueBeachDay") {
+      if (type === 'formDropTropical' && age >=50 && hobbieInput === "radioValueBeachDay" && typeOfLocation === "formDropCarribean") {
         var oneVariable = "St Martin";
         $("#sm").show();
         $("#vacaName").text(oneVariable);
         $("#printToScreen").show();
       }
-      else if (type === 'formDropTropical' && age >=50 && hobbieInput === "radioValueAdventure") {
+      else if (type === 'formDropTropical' && age >=50 && hobbieInput === "radioValueAdventure" && typeOfLocation === "formDropNorthAmerica") {
         var oneVariable = "Hawaii";
         $("#hawaii").show();
         $("#vacaName").text(oneVariable);
         $("#printToScreen").show();
       }
-      else if (type === 'formDropTropical' && age <50 && hobbieInput === "radioValueBeachDay") {
+      else if (type === 'formDropTropical' && age >=50 && hobbieInput === "radioValueSpa" && typeOfLocation === "formDropNorthAmerica") {
         var oneVariable = "Hawaii";
         $("#hawaii").show();
         $("#vacaName").text(oneVariable);
         $("#printToScreen").show();
       }
-      else if (type === 'formDropTropical' && age <50 && hobbieInput === "radioValueSpa") {
-        var oneVariable = "Las Vegas";
-        $("#hawaii").show();
+      else if (type === 'formDropTropical' && age <50 && hobbieInput === "radioValueSpa" && typeOfLocation === "formDropCarribean") {
+        var oneVariable = "Bahamas";
+        $("#ba").show();
         $("#vacaName").text(oneVariable);
         $("#printToScreen").show();
       }
-      else if (type === 'formDropTropical' && age <50 && hobbieInput === "radioValueAdventure") {
+      else if (type === 'formDropTropical' && age <50 && hobbieInput === "radioValueBeachDay" && typeOfLocation === "formDropCarribean") {
+        var oneVariable = "St Martin";
+        $("#sm").show();
+        $("#vacaName").text(oneVariable);
+        $("#printToScreen").show();
+      }
+      else if (type === 'formDropTropical' && age <50 && hobbieInput === "radioValueAdventure" && typeOfLocation === "formDropNorthAmerica") {
         var oneVariable = "Hawaii";
         $("#hawaii").show();
         $("#vacaName").text(oneVariable);
         $("#printToScreen").show();
       }
-      else if (type === 'formDropDry' && age >=50 && hobbieInput === "radioValueSpa") {
+      else if (type === 'formDropDry' && age >=50 && hobbieInput === "radioValueSpa" && typeOfLocation === "formDropNorthAmerica") {
         var oneVariable = "Las Vegas";
         $("#lv").show();
         $("#vacaName").text(oneVariable);
         $("#printToScreen").show();
       }
-      else if (type === 'formDropDry' && age >=50 && hobbieInput === "radioValueAdventure") {
+      else if (type === 'formDropDry' && age >=50 && hobbieInput === "radioValueBeachDay" && typeOfLocation === "formDropNorthAmerica") {
+        var oneVariable = "Hawaii";
+        $("#hawaii").show();
+        $("#vacaName").text(oneVariable);
+        $("#printToScreen").show();
+      }
+      else if (type === 'formDropDry' && age <50 && hobbieInput === "radioValueBeachDay" && typeOfLocation === "formDropNorthAmerica") {
+        var oneVariable = "Hawaii";
+        $("#hawaii").show();
+        $("#vacaName").text(oneVariable);
+        $("#printToScreen").show();
+      }
+      else if (type === 'formDropDry' && age <50 && hobbieInput === "radioValueSpa" && typeOfLocation === "formDropNorthAmerica") {
         var oneVariable = "Las Vegas";
         $("#lv").show();
         $("#vacaName").text(oneVariable);
         $("#printToScreen").show();
       }
-      else if (type === 'formDropDry' && age <50 && hobbieInput === "radioValueAdventure") {
+      else if (type === 'formDropDry' && age >=50 && hobbieInput === "radioValueAdventure" && typeOfLocation === "formDropNorthAmerica") {
+        var oneVariable = "Las Vegas";
+        $("#lv").show();
+        $("#vacaName").text(oneVariable);
+        $("#printToScreen").show();
+      }
+      else if (type === 'formDropDry' && age <50 && hobbieInput === "radioValueAdventure" && typeOfLocation === "formDropAsia") {
         var oneVariable = "Gobi Desert";
         $("#gd").show();
         $("#vacaName").text(oneVariable);
         $("#printToScreen").show();
       }
-      else if (type === 'formDropMild' && age >=50 && hobbieInput === "radioValueBeachDay") {
+      else if (type === 'formDropMild' && age >=50 && hobbieInput === "radioValueBeachDay" && typeOfLocation === "formDropCarribean") {
         var oneVariable = "Bahamas";
         $("#ba").show();
         $("#vacaName").text(oneVariable);
         $("#printToScreen").show();
       }
-      else if (type === 'formDropMild' && age >=50 && hobbieInput === "radioValueAdventure") {
+      else if (type === 'formDropMild' && age >=50 && hobbieInput === "radioValueSpa" && typeOfLocation === "formDropNorthAmerica") {
+        var oneVariable = "Hawaii";
+        $("#hawaii").show();
+        $("#vacaName").text(oneVariable);
+        $("#printToScreen").show();
+      }
+      else if (type === 'formDropMild' && age >=50 && hobbieInput === "radioValueAdventure" && typeOfLocation === "formDropCarribean") {
         var oneVariable = "Bahamas";
         $("#ba").show();
         $("#vacaName").text(oneVariable);
         $("#printToScreen").show();
       }
-      else if (type === 'formDropMild' && age <50 && hobbieInput === "radioValueBeachDay") {
+      else if (type === 'formDropMild' && age <50 && hobbieInput === "radioValueBeachDay" && typeOfLocation === "formDropNorthAmerica") {
+        var oneVariable = "Las Vegas";
+        $("#lv").show();
+        $("#vacaName").text(oneVariable);
+        $("#printToScreen").show();
+      }
+      else if (type === 'formDropMild' && age <50 && hobbieInput === "radioValueSpa" && typeOfLocation === "formDropNorthAmerica") {
         var oneVariable = "Hawaii";
         $("#hawaii").show();
         $("#vacaName").text(oneVariable);
         $("#printToScreen").show();
+
       }
-      else if (type === 'formDropMild' && age <50 && hobbieInput === "radioValueAdventure") {
-        var oneVariable = "Hawaii";
-        $("#hawaii").show();
+      else if (type === 'formDropMild' && age <50 && hobbieInput === "radioValueAdventure" && typeOfLocation === "formDropCarribean") {
+        var oneVariable = "St Martin";
+        $("#sm").show();
         $("#vacaName").text(oneVariable);
         $("#printToScreen").show();
       }
-      else if (type === 'formDropPolar' && age >=50 && hobbieInput === "radioValueAdventure") {
+      else if (type === 'formDropPolar' && age >=50 && hobbieInput === "radioValueAdventure" && typeOfLocation === "formDropNorthAmerica") {
         var oneVariable = "Alaska";
         $("#ak").show();
         $("#vacaName").text(oneVariable);
         $("#printToScreen").show();
       }
-      else if (type === 'formDropPolar' && age <50 && hobbieInput === "radioValueAdventure") {
+      else if (type === 'formDropPolar' && age >=50 && hobbieInput === "radioValueSpa" && typeOfLocation === "formDropNorthAmerica") {
+        var oneVariable = "Bend Oregon";
+        $("#bo").show();
+        $("#vacaName").text(oneVariable);
+        $("#printToScreen").show();
+      }
+      else if (type === 'formDropPolar' && age >=50 && hobbieInput === "radioValueBeachDay" && typeOfLocation === "formDropNorthAmerica") {
+        var oneVariable = "WAIT why would you choose Polar? Just go to Hawaii!";
+        $("#hawaii").show();
+        $("#vacaName").text(oneVariable);
+        $("#printToScreen").show();
+      }
+      else if (type === 'formDropPolar' && age <50 && hobbieInput === "radioValueAdventure" && typeOfLocation === "formDropNorthAmerica") {
         var oneVariable = "Artic";
         $("#at").show();
+        $("#vacaName").text(oneVariable);
+        $("#printToScreen").show();
+      }
+      else if (type === 'formDropPolar' && age <50 && hobbieInput === "radioValueBeachDay" && typeOfLocation === "formDropNorthAmerica") {
+        var oneVariable = "Oregon Coast Surfing in the Snow!";
+        $("#sb").show();
+        $("#vacaName").text(oneVariable);
+        $("#printToScreen").show();
+      }
+      else if (type === 'formDropPolar' && age <50 && hobbieInput === "radioValueSpa" && typeOfLocation === "formDropNorthAmerica") {
+        var oneVariable = "Bend, Oregon";
+        $("#bo").show();
         $("#vacaName").text(oneVariable);
         $("#printToScreen").show();
       }
