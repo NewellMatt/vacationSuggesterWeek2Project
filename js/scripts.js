@@ -3,6 +3,7 @@ $(document).ready(function() {
     var age = parseInt($("input#age").val());
     var type = $("select#typeOfClimate").val();
     var hobbieInput = $("input[name=hobbie]:checked").val();
+    var nameInput = $("input#name").val();
 
     $("#hawaii").hide();
     $("#sm").hide();
@@ -12,6 +13,8 @@ $(document).ready(function() {
     $("#ak").hide();
     $("#ba").hide();
     $("#th").hide();
+    $("#sb").hide();
+    $("#bo").hide();
 
     if (age) {
       if (type === 'formDropTropical' && age >=50 && hobbieInput === "radioValueBeachDay") {
@@ -26,15 +29,21 @@ $(document).ready(function() {
         $("#vacaName").text(oneVariable);
         $("#printToScreen").show();
       }
-      else if (type === 'formDropTropical' && age <50 && hobbieInput === "radioValueBeachDay") {
+      else if (type === 'formDropTropical' && age >=50 && hobbieInput === "radioValueSpa") {
         var oneVariable = "Hawaii";
         $("#hawaii").show();
         $("#vacaName").text(oneVariable);
         $("#printToScreen").show();
       }
       else if (type === 'formDropTropical' && age <50 && hobbieInput === "radioValueSpa") {
-        var oneVariable = "Las Vegas";
-        $("#hawaii").show();
+        var oneVariable = "Bahamas";
+        $("#ba").show();
+        $("#vacaName").text(oneVariable);
+        $("#printToScreen").show();
+      }
+      else if (type === 'formDropTropical' && age <50 && hobbieInput === "radioValueBeachDay") {
+        var oneVariable = "St Martin";
+        $("#sm").show();
         $("#vacaName").text(oneVariable);
         $("#printToScreen").show();
       }
@@ -45,6 +54,24 @@ $(document).ready(function() {
         $("#printToScreen").show();
       }
       else if (type === 'formDropDry' && age >=50 && hobbieInput === "radioValueSpa") {
+        var oneVariable = "Las Vegas";
+        $("#lv").show();
+        $("#vacaName").text(oneVariable);
+        $("#printToScreen").show();
+      }
+      else if (type === 'formDropDry' && age >=50 && hobbieInput === "radioValueBeachDay") {
+        var oneVariable = "Hawaii";
+        $("#hawaii").show();
+        $("#vacaName").text(oneVariable);
+        $("#printToScreen").show();
+      }
+      else if (type === 'formDropDry' && age <50 && hobbieInput === "radioValueBeachDay") {
+        var oneVariable = "Hawaii";
+        $("#hawaii").show();
+        $("#vacaName").text(oneVariable);
+        $("#printToScreen").show();
+      }
+      else if (type === 'formDropDry' && age <50 && hobbieInput === "radioValueSpa") {
         var oneVariable = "Las Vegas";
         $("#lv").show();
         $("#vacaName").text(oneVariable);
@@ -68,6 +95,12 @@ $(document).ready(function() {
         $("#vacaName").text(oneVariable);
         $("#printToScreen").show();
       }
+      else if (type === 'formDropMild' && age >=50 && hobbieInput === "radioValueSpa") {
+        var oneVariable = "Hawaii";
+        $("#hawaii").show();
+        $("#vacaName").text(oneVariable);
+        $("#printToScreen").show();
+      }
       else if (type === 'formDropMild' && age >=50 && hobbieInput === "radioValueAdventure") {
         var oneVariable = "Bahamas";
         $("#ba").show();
@@ -75,14 +108,21 @@ $(document).ready(function() {
         $("#printToScreen").show();
       }
       else if (type === 'formDropMild' && age <50 && hobbieInput === "radioValueBeachDay") {
+        var oneVariable = "Las Vegas";
+        $("#lv").show();
+        $("#vacaName").text(oneVariable);
+        $("#printToScreen").show();
+      }
+      else if (type === 'formDropMild' && age <50 && hobbieInput === "radioValueSpa") {
         var oneVariable = "Hawaii";
         $("#hawaii").show();
         $("#vacaName").text(oneVariable);
         $("#printToScreen").show();
+
       }
       else if (type === 'formDropMild' && age <50 && hobbieInput === "radioValueAdventure") {
-        var oneVariable = "Hawaii";
-        $("#hawaii").show();
+        var oneVariable = "St Martin";
+        $("#sm").show();
         $("#vacaName").text(oneVariable);
         $("#printToScreen").show();
       }
@@ -92,9 +132,33 @@ $(document).ready(function() {
         $("#vacaName").text(oneVariable);
         $("#printToScreen").show();
       }
+      else if (type === 'formDropPolar' && age >=50 && hobbieInput === "radioValueSpa") {
+        var oneVariable = "Bend Oregon";
+        $("#bo").show();
+        $("#vacaName").text(oneVariable);
+        $("#printToScreen").show();
+      }
+      else if (type === 'formDropPolar' && age >=50 && hobbieInput === "radioValueBeachDay") {
+        var oneVariable = "WAIT why would you choose Polar? Just go to Hawaii!";
+        $("#hawaii").show();
+        $("#vacaName").text(oneVariable);
+        $("#printToScreen").show();
+      }
       else if (type === 'formDropPolar' && age <50 && hobbieInput === "radioValueAdventure") {
         var oneVariable = "Artic";
         $("#at").show();
+        $("#vacaName").text(oneVariable);
+        $("#printToScreen").show();
+      }
+      else if (type === 'formDropPolar' && age <50 && hobbieInput === "radioValueBeachDay") {
+        var oneVariable = "Oregon Coast Surfing in the Snow!";
+        $("#sb").show();
+        $("#vacaName").text(oneVariable);
+        $("#printToScreen").show();
+      }
+      else if (type === 'formDropPolar' && age <50 && hobbieInput === "radioValueSpa") {
+        var oneVariable = "Bend, Oregon";
+        $("#bo").show();
         $("#vacaName").text(oneVariable);
         $("#printToScreen").show();
       }
