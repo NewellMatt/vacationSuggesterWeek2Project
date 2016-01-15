@@ -1,11 +1,12 @@
 $(document).ready(function() {
   $("#celebrityDate").submit(function(event) {
     var age = parseInt($("input#age").val());
-    var type = $("select#type").val();
+    var type = $("select#typeOfClimate").val();
 
     $("#hawaii").hide();
     $("#sm").hide();
     $("#gd").hide();
+    $("#lv").hide();
 
     if (age) {
       if (type === 'formDropTropical' && age >=50) {
@@ -16,10 +17,11 @@ $(document).ready(function() {
         var oneVariable = "Hawaii";
         $("#hawaii").show();
       }
-      else if (type === 'Dry' && age >=50) {
+      else if (type === 'formDropDry' && age >=50) {
         var oneVariable = "Las Vegas";
+        $("#lv").show();
       }
-      else if (type === 'Dry' && age <50) {
+      else if (type === 'formDropDry' && age <50) {
         var oneVariable = "Gobi Desert";
         $("#gd").show();
 
