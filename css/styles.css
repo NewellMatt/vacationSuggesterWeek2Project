@@ -1,22 +1,29 @@
 #printToScreen, #hawaii, #sm, #gd, #lv, #ak, #at, #ba, #ta, #sb, #bo {
   display: none;
 }
-
-h1, h3 {
+html{
+  background-color: #b64f34
   text-align: center;
 }
-
-label {
+body {
+  font-family: Sans-serif;
+  font-style: normal;
+  font-weight: 400;
   font-size: 16px;
+  background-color: #f5fff3;
 }
 
+img {
+  max-width: 275px;
+  margin-left: 50%
+}
 .btn {
   margin-top: 20px;
 }
 
-img {
-  max-width: 500px
-}
-h1:hover{
-  color: #ff0123
+.btn{
+  background-color: #229000;
+  color: white;
+  border: none;
+  margin-top: 15px;
 }
